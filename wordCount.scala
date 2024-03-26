@@ -15,7 +15,7 @@ object wordCount  {
   val input = sc.textFile("C:/Ranjini/Ranjini/Dataset/data.txt")
   //input.collect.foreach(println)
   val words =input.flatMap(x => x.split(" "))
-  //words.collect.foreach(println)
+  words.collect.foreach(println)
   val wordMap = words.map(x=>(x,1))
   //wordMap.collect.foreach(println)
   val finalCount= wordMap.reduceByKey((x,y) => x+y)
